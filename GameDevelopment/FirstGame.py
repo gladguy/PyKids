@@ -13,12 +13,25 @@ width = 40
 height = 60
 speed = 5
 
-for i in range(2000):
-    pygame.draw.rect(win, (100,100,255), (x, y, width, height))
-    pygame.display.update()
+done = False
+while not done:
 
-    pygame.draw.circle(win,(0,255,0),(x+100,y+30),20)
-    pygame.display.update()
+
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            done = True
+
+    win.fill((0, 0, 0))
+
+    pressed = pygame.key.get_pressed()
+    if pressed[pygame.K_UP]:    y = y - 1
+    if pressed[pygame.K_DOWN]:  y = y + 1
+    if pressed[pygame.K_LEFT]:  x = x - 1
+    if pressed[pygame.K_RIGHT]: x = x + 1
+
+    pygame.draw.rect(win, (100,100,255), (x, y, width, height))
+    pygame.display.flip()
+
 pygame.quit()
 
 
