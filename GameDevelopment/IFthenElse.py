@@ -2,7 +2,8 @@ x = 10  #Intial
 x = input("Enter X value ")
 
 print("Value entered by the user " + str(x))
-if(x.isnumeric()):
+
+if(x.isnumeric()): #Explain this We are string to number
     x = int(x)
     if  (x > 85):
         print("First Class")

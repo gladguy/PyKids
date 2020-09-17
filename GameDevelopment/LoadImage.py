@@ -28,7 +28,7 @@ while not done:
 
     screen.fill((255, 255, 255))
 
-    screen.blit(get_image('ball.png'), (20, 20))
+    screen.blit(get_image('dog.png'), (20, 20))
 
     pygame.display.flip()
     clock.tick(60)

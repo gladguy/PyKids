@@ -1,6 +1,6 @@
 x = input("Enter your number")
 
-x = int(x)
+x = int(x)  # We are converting the string to Integer
 if(x > 10):
     print("X is greater than 10")
 else:
