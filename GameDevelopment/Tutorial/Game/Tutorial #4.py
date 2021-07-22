@@ -50,6 +50,7 @@ def redrawGameWindow():
 
 #mainloop
 man = player(200, 410, 64,64)
+
 run = True
 while run:
     clock.tick(27)
@@ -64,6 +65,7 @@ while run:
         man.x -= man.vel
         man.left = True
         man.right = False
+
     elif keys[pygame.K_RIGHT] and man.x < 500 - man.width - man.vel:
         man.x += man.vel
         man.right = True

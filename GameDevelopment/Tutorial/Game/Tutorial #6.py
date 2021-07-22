@@ -106,6 +106,7 @@ def redrawGameWindow():
     win.blit(bg, (0,0))
     man.draw(win)
     goblin.draw(win)
+    goblin1.draw(win)
     for bullet in bullets:
         bullet.draw(win)
     
@@ -115,6 +116,7 @@ def redrawGameWindow():
 #mainloop
 man = player(200, 410, 64,64)
 goblin = enemy(100, 410, 64, 64, 300)
+goblin1 = enemy(200, 410, 64, 64, 300)
 bullets = []
 run = True
 while run:
